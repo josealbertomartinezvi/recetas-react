@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import Ingredientes from './ingredientes/Ingredientes';
 import Descripcion from './descripcion/Descripcion';
-import Resultados from './resultados/Resultados';
+import Resultado from './resultado/Resultado';
 
 const Inicio = () => (
     <Fragment>
@@ -16,7 +16,7 @@ const Inicio = () => (
         </div>
         <div className="row">
             <div className="form-group col-12 col-md-12">
-                <Resultados />
+                <Resultado />
             </div>
         </div>
     </Fragment>
