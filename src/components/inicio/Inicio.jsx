@@ -53,7 +53,7 @@ class Inicio extends Component {
                 </div>
                 <div className="row">
                     <div className="form-group col-12 col-md-12">
-                        <Resumen />
+                        <Resumen preparacion = { this.state.preparacion } ingredientes = { this.state.ingredientes } />
                     </div>
                 </div>
             </Fragment>

@@ -18,7 +18,7 @@ class Resultado extends Component {
                         {
                             (this.props.resultado !== '') ? 
                             <div>
-                                Resultado: { this.props.resultado }
+                                Ingredientes: { this.props.resultado }
                             </div>
                             : ''
                         }
