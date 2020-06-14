@@ -1,14 +1,33 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
-class Resultados extends Component {
-    state = { 
+class Resultado extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
 
+        }
     }
     render(){
         return (
-            <h1>Resultados</h1>
+            <Fragment>
+                {
+                    (this.props.preparacion !== '') ? 
+                    <div>
+                        <h2>Ingredientes para preparar una { this.props.preparacion }.</h2> 
+                        <br/>
+                        {
+                            (this.props.resultado !== '') ? 
+                            <div>
+                                Resultado: { this.props.resultado }
+                            </div>
+                            : ''
+                        }
+                    </div>
+                    : ''
+                }
+            </Fragment>
         );
     }
 }
 
-export default Resultados;
+export default Resultado;

@@ -7,23 +7,18 @@ class Ingredientes extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            ingredientes: ''
+            
         }
     }
 
-    agregarIngrediente = tipo => () => {
-        this.setState({
-            ingredientes: tipo
-        });
-    }
     render(){
         return (
             <Fragment>
                 {
                     (this.props.preparacion === 'ensalada de frutas') ? 
-                        <Ensalada agregarIngrediente={ this.agregarIngrediente } /> :
+                        <Ensalada agregarIngrediente={ this.props.ingrediente } /> :
                     (this.props.preparacion === 'sopa') ? 
-                        <Sopa agregarIngrediente={ this.agregarIngrediente } /> : ''
+                        <Sopa agregarIngrediente={ this.props.ingrediente } /> : ''
                 }
             </Fragment>
         );
