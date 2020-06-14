@@ -1,12 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 class Descripcion extends Component {
-    state = { 
+    constructor(props) {
+        super(props);
+        this.state = {
 
+        }
     }
     render(){
         return (
-            <h1>Descripcion</h1>
+            <Fragment>
+                {
+                    (this.props.preparacion != '') ? 
+                    <h2>Ingredientes para preparar una { this.props.preparacion }.</h2> : ''
+                }
+            </Fragment>
         );
     }
 }

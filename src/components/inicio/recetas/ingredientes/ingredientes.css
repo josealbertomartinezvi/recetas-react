@@ -1,0 +1,17 @@
+/* .frutas #grupo:hover #banano {
+  fill: rgba(255, 251, 0, 0.637);
+} 
+.frutas #grupo:hover #manzana {
+  fill: rgba(255, 251, 0, 0.637);
+}
+.frutas #grupo:hover #fresa {
+  fill: rgba(255, 251, 0, 0.637);
+}
+.frutas #grupo:hover #patilla {
+  fill: rgba(255, 251, 0, 0.637);
+} */
+
+.ingrediente:hover 
+{
+  fill: rgba(255, 251, 0, 0.637);
+}
