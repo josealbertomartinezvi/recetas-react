@@ -1,6 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
+import './preparaciones.css';
+
+/**
+ * Componente encargado se seleccionar el tipo de preparación sea la sopa o la end¿salada de frutas
+ */
 class Preparaciones extends Component {
 
     static propTypes = {
@@ -12,8 +17,8 @@ class Preparaciones extends Component {
 
         return (
             <Fragment>
-                <div className="row">
-                    <div className="col align-self-start">
+                <div className="row mb-4">
+                    <div className="col-12 col-md-12 text-aling-center">
                         <button
                             type="button"
                             className="btn btn-success float-right"
@@ -21,8 +26,6 @@ class Preparaciones extends Component {
                         >
                             Sopa
                         </button>
-                    </div>
-                    <div className="col align-self-end">
                         <button 
                             type="button" 
                             className="btn btn-success float-right"

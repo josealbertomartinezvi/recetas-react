@@ -1,5 +1,5 @@
 import API from './config';
-import axios from 'axios';
+import axios from 'axios'; // paquete para comunicar con una API
 
 const RECETAS_ENDPOINTS = {
   LISTA: "recetas/lista", //URI para obtener todas las recetas
@@ -8,11 +8,7 @@ const RECETAS_ENDPOINTS = {
 
 const RecetaService = {
    getRecetas: async () => {
-    await axios.get(`${ API.baseURL }${ RECETAS_ENDPOINTS.LISTA }`)
-    .then(res => {
-      const personas = res.data;
-      console.log(personas)
-    })
+    return await axios.get(`${ API.baseURL }${ RECETAS_ENDPOINTS.LISTA }`)
   },
   saveReceta: async (data) => {
     return await axios.post(`${ API.baseURL }${ RECETAS_ENDPOINTS.NUEVA }`, { data });

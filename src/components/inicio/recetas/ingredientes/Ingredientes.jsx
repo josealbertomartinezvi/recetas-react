@@ -3,6 +3,9 @@ import React, { Component, Fragment } from 'react';
 import Sopa from './sopa/Sopa';
 import Ensalada from './ensalada/Ensalada';
 
+/**
+ * Componente que muestra la imagen seleccionada (para la ensalada de frutas o para la sopa)
+ */
 class Ingredientes extends Component {
     constructor(props) {
         super(props);

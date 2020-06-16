@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
+/**
+ * Componente que muesta los ingredientes seleccionados por el para cada una de las preparaciones (sopa o ensalada de frutas)
+ */
 class Resultado extends Component {
     constructor(props) {
         super(props);
@@ -18,7 +21,7 @@ class Resultado extends Component {
                         {
                             (this.props.resultado !== '') ? 
                             <div>
-                                Ingredientes: { this.props.resultado }
+                                <h5>Ingredientes: { this.props.resultado }</h5>
                             </div>
                             : ''
                         }

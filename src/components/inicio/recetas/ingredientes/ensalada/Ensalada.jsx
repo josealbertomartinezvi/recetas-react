@@ -3,14 +3,17 @@ import PropTypes from 'prop-types';
 
 import "./../ingredientes.css";
 
+/**
+ * Componente para manipular la imagen para la ensalada de frutas
+ */
 class Ensalada extends Component {
 
-    static propTypes = {
+    static propTypes = { // Restricción al tipo de prop enviada desde el componente padre
         agregarIngrediente: PropTypes.func.isRequired
     }
 
     render(){
-        const { agregarIngrediente } = this.props;
+        const { agregarIngrediente } = this.props; // obteniendo la prop del componente padre 
 
         return (
             <svg className="frutas" width="441px" height="435px" viewBox="0 0 441 435" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">

@@ -1,13 +1,22 @@
 import React, { Fragment, Component } from 'react';
 
+/**
+ * componentes de las vistas
+ */
 import Preparaciones from './recetas/preparaciones/Preparaciones';
 import Ingredientes from './recetas/ingredientes/Ingredientes';
 import Resultado from './resultado/Resultado';
 import Resumen from './resumen/Resumen';
 
+/**
+ * Helpers (Codigo de funcionaalidad reutilizable)
+ */
 import construirResultado from '../../helpers/constructor';
-import asignarArray from '../../helpers/asignador';
+import validarIngrediente from '../../helpers/asignador';
 
+/**
+ *  Servicio para cominicación con la API
+ */
 import recetaService from '../../services/RecetaService';
 
 class Inicio extends Component {
@@ -46,7 +55,7 @@ class Inicio extends Component {
     }
 
     asignarIngrediente = ingredienteSeleccionado => () => {
-        let ingredientes = asignarArray(this.state.ingredientes, ingredienteSeleccionado);
+        let ingredientes = validarIngrediente(this.state.ingredientes, ingredienteSeleccionado);
         let resultado = construirResultado(ingredientes);
 
         this.setState({
@@ -70,7 +79,7 @@ class Inicio extends Component {
                     </div>
                     <div className="form-group col-12 col-md-6">
                         <Resultado preparacion = { this.state.preparacion } resultado = { this.state.resultado } />
-                        <br/>
+                        <hr/>
                         <Resumen preparacion = { this.state.preparacion } ingredientes = { this.state.ingredientes } />
                     </div>
                 </div>
