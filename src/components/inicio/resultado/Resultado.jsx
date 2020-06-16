@@ -16,7 +16,7 @@ class Resultado extends Component {
                 {
                     (this.props.preparacion !== '') ? 
                     <div>
-                        <h2>Ingredientes para preparar una { this.props.preparacion }.</h2> 
+                        <h2>Ingredientes para preparar una <strong>{ this.props.preparacion }</strong>.</h2> 
                         <br/>
                         {
                             (this.props.resultado !== '') ? 
