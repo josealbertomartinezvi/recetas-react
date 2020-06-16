@@ -1,5 +1,5 @@
 /**
- * Configuración de la url del sercidor
+ * Configuración de la url del servidor
  */
 
 const API = {
